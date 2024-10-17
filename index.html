@@ -4,8 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>USwitch</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="/assets/js/main.js" defer></script>
 </head>
-<body>
-    <h1>Hello World Test</h1>
+<body class="bg-gray-100">
+    <nav class="bg-gray-200 bg-opacity-75 p-4 flex justify-between items-center relative">
+        <button id="menu-button" class="md:hidden text-gray-800 focus:outline-none">
+            <i class="fas fa-bars w-6 h-6"></i>
+        </button>
+        <div class="hidden md:flex space-x-4">
+            <a href="#" class="text-gray-800 bg-gray-200 bg-opacity-15 p-2 rounded">Avaleht</a>
+            <a href="#" class="text-gray-800 bg-gray-200 bg-opacity-15 p-2 rounded">Meist</a>
+            <a href="#" class="text-gray-800 bg-gray-200 bg-opacity-15 p-2 rounded">Kontakt</a>
+        </div>
+        <div class="flex justify-center flex-grow">
+            <a href="/">
+                <img src="/assets/img/logoblack.png" 
+                     alt="U SWITCH OÜ" 
+                     loading="eager" 
+                     class="navbar-logo motion-reduce" 
+                     sizes="(max-width: 160px) 50vw, 80px">
+            </a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="#"><i class="fab fa-facebook h-6 w-6 text-gray-800"></i></a>
+            <a href="#"><i class="fab fa-instagram h-6 w-6 text-gray-800"></i></a>
+        </div>
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-gray-200 p-4">
+            <a href="#" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-50">Avaleht</a>
+            <a href="#" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100">Meist</a>
+            <a href="#" class="block text-gray-800 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-150">Kontakt</a>
+        </div>
+    </nav>
+    <section id="cctv" class="relative bg-cover bg-center h-96 cctv-section-background">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center p-4">
+            <h2 class="text-white cctv-section-heading">Loome Turvalisi Nutikodusid – See On Meie Kunst</h2>
+            <p class="text-gray-500 cctv-section-subtext">
+                Valige usaldusväärsed ja nutikad lahendused ettevõttelt U SWITCH, et teha oma kodust veelgi mugavam ja turvalisem paik.
+            </p>
+        </div>
+    </section>
+    <section id="what_we_offer" class="flex justify-center mt-20 px-4 md:px-0">
+        <p class="what-we-offer-text">
+            Pakume innovaatilisi valve- ja targa kodu lahendusi kasutades 
+            <a class="underline" href="https://ajax.systems/" target="_blank" title="https://ajax.systems/">AJAXi tooteid.</a>
+        </p>
+    </section>
 </body>
 </html>
