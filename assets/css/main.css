@@ -1,0 +1,114 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.libre-baskerville {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.navbar-logo {
+    width: 80px;
+    height: 23.007915567282325px;
+    display: block;
+    box-sizing: border-box;
+    object-fit: contain;
+}
+
+.cctv-section-background {
+    background-image: url('../img/cctv.jpg?v=1697460715&width=3600');
+}
+
+.cctv-section-heading {
+    font-family: 'Libre Baskerville', serif;
+    box-sizing: border-box;
+    color: white;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 31.2px;
+    text-align: center;
+    padding: 0 1rem; /* Add padding for smaller screens */
+}
+
+.cctv-section-subtext {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.75);
+    display: block;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    letter-spacing: 0.6px;
+    line-height: 28.8px;
+    list-style-position: outside;
+    overflow-wrap: break-word;
+    scrollbar-color: rgb(18, 18, 18) rgba(18, 18, 18, 0.04);
+    text-align: center;
+    width: auto;
+    max-width: 475px;
+    padding: 0 1rem;
+}
+
+.what-we-offer-text {
+    box-sizing: border-box;
+    color: rgb(18, 18, 18);
+    text-align: center;
+    display: block;
+    font-family: "Libre Baskerville", serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    letter-spacing: 0.6px;
+    line-height: 31.2px;
+    opacity: 1;
+    overflow-wrap: break-word;
+    text-align: center;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    unicode-bidi: isolate;
+    width: auto;
+    max-width: 500px;
+    word-break: break-word;
+    padding: 0 1rem;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile-menu.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#mobile-menu a {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile-menu.show a {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#mobile-menu.show a:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+#mobile-menu.show a:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+
+#mobile-menu.show a:nth-child(3) {
+    transition-delay: 0.2s;
+}
+/* Add more nth-child rules if you have more menu items */
