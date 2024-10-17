@@ -20,5 +20,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./src
+          publish_dir: ./
           cname: test.uswitch.ee
+          publish_branch: gh_pages_test
