@@ -15,6 +15,17 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Close mobile menu when a menu item is clicked
+    document.querySelectorAll('.mobile-menu-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.remove('show');
+            setTimeout(function() {
+                menu.classList.add('hidden');
+            }, 300); // Delay to match the transition duration
+        });
+    });
+
     // Calendly popup widget
     document.getElementById('schedule-button').addEventListener('click', function() {
         Calendly.initPopupWidget({ url: 'https://calendly.com/apilookinlabs/30min' });

@@ -28,15 +28,15 @@
         </button>
         <div class="hidden md:flex space-x-4">
             <a href="/" class="text-gray-800 p-2 rounded">Avaleht</a>
-            <a href="#about_navbar" class="text-gray-800 p-2 rounded">Meist</a>
             <a href="#services_navbar" class="text-gray-800 p-2 rounded">Teenused</a>
+            <a href="#about_navbar" class="text-gray-800 p-2 rounded">Meist</a>
             <a href="#contact_navbar" class="text-gray-800 p-2 rounded">Kontakt</a>
         </div>
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-gray-200 p-4">
-            <a href="/" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-50">Avaleht</a>
-            <a href="#about_navbar" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100">Meist</a>
-            <a href="#services_navbar" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100">Teenused</a>
-            <a href="#contact_navbar" class="block text-gray-800 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-150">Kontakt</a>
+            <a href="/" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-50 mobile-menu-item">Avaleht</a>
+            <a href="#services_navbar" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100 mobile-menu-item">Teenused</a>
+            <a href="#about_navbar" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100 mobile-menu-item">Meist</a>
+            <a href="#contact_navbar" class="block text-gray-800 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-150 mobile-menu-item">Kontakt</a>
         </div>
     </nav>
     <section id="cctv" class="relative bg-cover bg-center h-96 cctv-section-background">
@@ -48,40 +48,14 @@
         </div>
     </section>
     <main class="pr-10 pl-10 md:pr-16 md:pl-16">
-        <section id="about_navbar"></section>
-        <section id="about" class="flex flex-col space-y-4 mt-20">
-            <div class="flex justify-center">
-                <p class="what-we-offer-text text-center mb-8 underline">
-                    Meist
-                </p>
-            </div>
-            <div class="flex flex-col md:flex-row items-center">
-                <div class="w-full md:w-1/2 p-4">
-                    <img src="/assets/img/us.jpg" alt="" class="w-full h-auto">
-                </div>
-                <div class="w-full md:w-1/2 p-4 text-center">
-                    <p class="montserrat text-md mb-2 text-left ">
-                        Ettevõte U Switch on spetsialiseerunud nutimajade ehitamisele, nutimoodulite paigaldamisele ning kvaliteetsete seadmete müügile. 
-                        Oleme Ajax Security System kööstööpartnerid, tänu millele saame pidevalt nende poolt täiendavaid koolitusi, tagades sellega oma kliendile kõige uuema ja turvalisema lahenduse.
-                    </p>
-                    <p class="montserrat text-md mb-2 text-left">
-                        Meie eesmärk on muuta Teie kodu või äripind turvalisemaks ning lihtsustada igapäevaseid toiminguid nutikate seadmete abil. Oleme pühendunud pakkuma parimat teenust ning kvaliteetseid tooteid.
-                        Liituge meiega ja laske meil teha Teie elu lihtsamaks ja turvalisemaks!
-                    </p>
-                    <p class="montserrat text-md mb-2 text-left">
-                        - Denis Kitšigin ja Pavel Borovik (Juhatuse liikmed)
-                    </p>
-                </div>
-            </div>
-        </section>
         <section id="services_navbar"></section>
-        <section id="what_we_offer" class="flex justify-center mt-24 px-4 md:px-0">
+        <section id="what_we_offer_text" class="flex justify-center mt-24 px-4 md:px-0">
             <p class="what-we-offer-text">
                 Pakume innovaatilisi valve- ja targa kodu lahendusi kasutades 
                 <a class="underline" href="https://ajax.systems/" target="_blank" title="https://ajax.systems/">AJAXi tooteid.</a>
             </p>
         </section>
-        <section id="offers" class="flex flex-col space-y-4 mt-16">
+        <section id="services" class="flex flex-col space-y-4 mt-16">
             <div class="flex flex-col-reverse md:flex-row items-center">
                 <div class="w-full md:w-1/2 p-4">
                     <img src="/assets/img/Ajax-4080.jpg" alt="" class="w-full h-72 object-cover">
@@ -110,6 +84,32 @@
                     <p class="montserrat text-md mb-2">TEENUS</p>
                     <h2 class="libre-baskerville text-4xl">Seadmete müük</h2>
                     <p class="montserrat text-base mt-4">Pakume tipptasemel juhtmevabu tooteid, mille on innovaatiline disain</p>
+                </div>
+            </div>
+        </section>
+        <section id="about_navbar"></section>
+        <section id="about" class="flex flex-col space-y-4 mt-20">
+            <div class="flex justify-center">
+                <p class="what-we-offer-text text-center mb-8 underline">
+                    Meist
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="/assets/img/us.jpg" alt="" class="w-full h-auto">
+                </div>
+                <div class="w-full md:w-1/2 p-4 text-center">
+                    <p class="montserrat text-md mb-2 text-left ">
+                        Ettevõte U Switch on spetsialiseerunud nutimajade ehitamisele, nutimoodulite paigaldamisele ning kvaliteetsete seadmete müügile. 
+                        Oleme Ajax Security System kööstööpartnerid, tänu millele saame pidevalt nende poolt täiendavaid koolitusi, tagades sellega oma kliendile kõige uuema ja turvalisema lahenduse.
+                    </p>
+                    <p class="montserrat text-md mb-2 text-left">
+                        Meie eesmärk on muuta Teie kodu või äripind turvalisemaks ning lihtsustada igapäevaseid toiminguid nutikate seadmete abil. Oleme pühendunud pakkuma parimat teenust ning kvaliteetseid tooteid.
+                        Liituge meiega ja laske meil teha Teie elu lihtsamaks ja turvalisemaks!
+                    </p>
+                    <p class="montserrat text-md mb-2 text-left">
+                        - Denis Kitšigin ja Pavel Borovik (Juhatuse liikmed)
+                    </p>
                 </div>
             </div>
         </section>
