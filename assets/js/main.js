@@ -28,11 +28,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Calendly popup widget
     document.getElementById('schedule-button').addEventListener('click', function() {
-        Calendly.initPopupWidget({ url: 'https://calendly.com/apilookinlabs/30min' });
+        Calendly.initPopupWidget({ url: 'https://calendly.com/pavel-uswitch' });
         return false;
     });
 
-    // Background animation for the CCTV section
     // Background animation for the CCTV section
     const cctvSection = document.querySelector('.cctv-section-background');
     let positions = [
@@ -66,99 +65,100 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-  // Translations JSON
-  const languageButton = document.getElementById("language-button");
-  const languageOptions = document.getElementById("language-options");
-  const languageOptionsChildren = Array.from(languageOptions.children);
+    // Translations JSON
+    const languageButton = document.getElementById("language-button");
+    const languageOptions = document.getElementById("language-options");
+    const languageOptionsChildren = Array.from(languageOptions.children);
 
-  languageButton.addEventListener("click", function () {
-    languageOptions.classList.toggle("hidden");
-  });
-
-  languageOptionsChildren.forEach(function (option) {
-    option.addEventListener("click", function () {
-      // Get the selected language and flag
-      const language = option.dataset.value.toUpperCase();
-      const flag = option.querySelector(".flag-icon").className;
-
-      // Update the selected language and flag
-      document.getElementById("selected-language").innerHTML =
-        language + " <span class='" + flag + " mr-2'></span>";
-
-      // Hide the language options and load the translations
-      languageOptions.classList.add("hidden");
-      loadTranslations(language);
+    languageButton.addEventListener("click", function () {
+        languageOptions.classList.toggle("hidden");
     });
-  });
 
-  document.addEventListener("click", function (event) {
-    let isClickInside = document
-      .getElementById("language-changer")
-      .contains(event.target);
+    languageOptionsChildren.forEach(function (option) {
+        option.addEventListener("click", function () {
+            // Get the selected language and flag
+            const language = option.dataset.value.toUpperCase();
+            const flag = option.querySelector(".flag-icon").className;
 
-    if (!isClickInside) {
-      // The click was outside the #language-changer element, hide the dropdown
-      document.getElementById("language-options").classList.add("hidden");
-    }
-  });
+            // Update the selected language and flag
+            document.getElementById("selected-language").innerHTML =
+                language + " <span class='" + flag + " mr-2'></span>";
 
-function loadTranslations(language) {
-    language = language.toLowerCase();
-    document.documentElement.lang = language;
+            // Hide the language options and load the translations
+            languageOptions.classList.add("hidden");
+            loadTranslations(language);
+        });
+    });
 
-    fetch(`translations/${language}.json`)
-        .then((response) => response.json())
-        .then((data) => {
-            const translations = data;
-            const elements = document.querySelectorAll("[data-translation-key]");
+    document.addEventListener("click", function (event) {
+        let isClickInside = document
+            .getElementById("language-changer")
+            .contains(event.target);
 
-            elements.forEach((element) => {
-                const key = element.getAttribute("data-translation-key");
-                const keys = key.split(/[\[\]]/);
-                let translation;
-                if (keys.length > 1) {
-                    translation = translations[keys[0]][parseInt(keys[1])];
-                } else {
-                    translation = translations[key];
-                }
+        if (!isClickInside) {
+            // The click was outside the #language-changer element, hide the dropdown
+            document.getElementById("language-options").classList.add("hidden");
+        }
+    });
 
-                if (translation === undefined) {
-                    console.error(`Translation for key "${key}" not found.`);
-                }
+    function loadTranslations(language) {
+        language = language.toLowerCase();
+        document.documentElement.lang = language;
 
-                if (element.hasAttribute("placeholder")) {
-                    element.setAttribute("placeholder", translation);
-                } else {
-                    // Handle nested elements separately
-                    if (element.querySelectorAll("[data-translation-key]").length > 0) {
-                        element.childNodes.forEach((child) => {
-                            if (child.nodeType === Node.TEXT_NODE) {
-                                child.textContent = translation;
-                            }
-                        });
+        fetch(`translations/${language}.json`)
+            .then((response) => response.json())
+            .then((data) => {
+                const translations = data;
+                const elements = document.querySelectorAll("[data-translation-key]");
+
+                elements.forEach((element) => {
+                    const key = element.getAttribute("data-translation-key");
+                    const keys = key.split(/[\[\]]/);
+                    let translation;
+                    if (keys.length > 1) {
+                        translation = translations[keys[0]][parseInt(keys[1])];
+                    } else {
+                        translation = translations[key];
+                    }
+
+                    if (translation === undefined) {
+                        console.error(`Translation for key "${key}" not found.`);
+                    }
+
+                    if (element.hasAttribute("placeholder")) {
+                        element.setAttribute("placeholder", translation);
+                    } else {
+                        // Handle nested elements separately
+                        if (element.querySelectorAll("[data-translation-key]").length > 0) {
+                            element.childNodes.forEach((child) => {
+                                if (child.nodeType === Node.TEXT_NODE) {
+                                    child.textContent = translation;
+                                }
+                            });
+                        } else {
+                            element.innerHTML = translation;
+                        }
+                    }
+                });
+
+                // Handle nested elements separately
+                const nestedElements = document.querySelectorAll("[data-translation-key] a[data-translation-key]");
+                nestedElements.forEach((element) => {
+                    const key = element.getAttribute("data-translation-key");
+                    const translation = translations[key];
+
+                    if (translation === undefined) {
+                        console.error(`Translation for key "${key}" not found.`);
                     } else {
                         element.innerHTML = translation;
                     }
-                }
+                });
+            })
+            .catch((error) => {
+                console.error("Error loading translations:", error);
             });
-
-            // Handle nested elements separately
-            const nestedElements = document.querySelectorAll("[data-translation-key] a[data-translation-key]");
-            nestedElements.forEach((element) => {
-                const key = element.getAttribute("data-translation-key");
-                const translation = translations[key];
-
-                if (translation === undefined) {
-                    console.error(`Translation for key "${key}" not found.`);
-                } else {
-                    element.innerHTML = translation;
-                }
-            });
-        })
-        .catch((error) => {
-            console.error("Error loading translations:", error);
-        });
     }
-  // Load translations when the page loads
-  loadTranslations("ee"); // Default language
+
+    // Load translations when the page loads
+    loadTranslations("ee"); // Default language
 });
