@@ -11,13 +11,13 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body class="bg-white">
-    <nav class="bg-gray-100 p-4 flex justify-between items-center fixed top-0 w-full z-50">
-        <div class="flex items-center space-x-4">
+    <nav class="bg-gray-100 p-4 flex justify-between items-center fixed top-0 w-full z-50 py-10">
+        <div class="flex items-center space-x-4 pl-8">
             <a href="/">
                 <img src="/assets/img/logoblack.png" 
                      alt="U SWITCH OÜ" 
                      loading="eager" 
-                     class="navbar-logo motion-reduce" 
+                     class="navbar-logo motion-reduce h-10" 
                      sizes="(max-width: 160px) 50vw, 80px">
             </a>
             <a href="#"><i class="fab fa-facebook h-6 w-6 text-gray-800"></i></a>
@@ -34,9 +34,9 @@
         </div>
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-gray-200 p-4">
             <a href="/" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-50">Avaleht</a>
-            <a href="#about" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100">Meist</a>
-            <a href="#what_we_offer" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100">Teenused</a>
-            <a href="#contact" class="block text-gray-800 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-150">Kontakt</a>
+            <a href="#about_navbar" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100">Meist</a>
+            <a href="#services_navbar" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100">Teenused</a>
+            <a href="#contact_navbar" class="block text-gray-800 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-150">Kontakt</a>
         </div>
     </nav>
     <section id="cctv" class="relative bg-cover bg-center h-96 cctv-section-background">
@@ -47,97 +47,99 @@
             </p>
         </div>
     </section>
-    <section id="about_navbar"></section>
-    <section id="about" class="flex flex-col space-y-4 mt-20">
-        <div class="flex justify-center">
-            <p class="what-we-offer-text text-center mb-8 underline">
-                Meist
+    <main class="pr-16 pl-16">
+        <section id="about_navbar"></section>
+        <section id="about" class="flex flex-col space-y-4 mt-20">
+            <div class="flex justify-center">
+                <p class="what-we-offer-text text-center mb-8 underline">
+                    Meist
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="/assets/img/us.jpg" alt="" class="w-full h-auto">
+                </div>
+                <div class="w-full md:w-1/2 p-4 text-center">
+                    <p class="montserrat text-md mb-2 text-left">
+                        Ettevõte U Switch on spetsialiseerunud nutimajade ehitamisele, nutimoodulite paigaldamisele ning kvaliteetsete seadmete müügile. 
+                        Oleme Ajax Security System kööstööpartnerid, tänu millele saame pidevalt nende poolt täiendavaid koolitusi, tagades sellega oma kliendile kõige uuema ja turvalisema lahenduse.
+                    </p>
+                    <p class="montserrat text-md mb-2 text-left">
+                        Meie eesmärk on muuta Teie kodu või äripind turvalisemaks ning lihtsustada igapäevaseid toiminguid nutikate seadmete abil. Oleme pühendunud pakkuma parimat teenust ning kvaliteetseid tooteid.
+                        Liituge meiega ja laske meil teha Teie elu lihtsamaks ja turvalisemaks!
+                    </p>
+                    <p class="montserrat text-md mb-2 text-left">
+                        - Denis Kitšigin ja Pavel Borovik (Juhatuse liikmed)
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="services_navbar"></section>
+        <section id="what_we_offer" class="flex justify-center mt-24 px-4 md:px-0">
+            <p class="what-we-offer-text">
+                Pakume innovaatilisi valve- ja targa kodu lahendusi kasutades 
+                <a class="underline" href="https://ajax.systems/" target="_blank" title="https://ajax.systems/">AJAXi tooteid.</a>
             </p>
-        </div>
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="w-full md:w-1/2 p-4">
-                <img src="/assets/img/us.jpg" alt="" class="w-full h-auto">
-            </div>
-            <div class="w-full md:w-1/2 p-4 text-center">
-                <p class="montserrat text-md mb-2 text-left">
-                    Ettevõte U Switch on spetsialiseerunud nutimajade ehitamisele, nutimoodulite paigaldamisele ning kvaliteetsete seadmete müügile. 
-                    Oleme Ajax Security System kööstööpartnerid, tänu millele saame pidevalt nende poolt täiendavaid koolitusi, tagades sellega oma kliendile kõige uuema ja turvalisema lahenduse.
-                </p>
-                <p class="montserrat text-md mb-2 text-left">
-                    Meie eesmärk on muuta Teie kodu või äripind turvalisemaks ning lihtsustada igapäevaseid toiminguid nutikate seadmete abil. Oleme pühendunud pakkuma parimat teenust ning kvaliteetseid tooteid.
-                    Liituge meiega ja laske meil teha Teie elu lihtsamaks ja turvalisemaks!
-                </p>
-                <p class="montserrat text-md mb-2 text-left">
-                    - Denis Kitšigin ja Pavel Borovik (Juhatuse liikmed)
-                </p>
-            </div>
-        </div>
-    </section>
-    <section id="services_navbar"></section>
-    <section id="what_we_offer" class="flex justify-center mt-24 px-4 md:px-0">
-        <p class="what-we-offer-text">
-            Pakume innovaatilisi valve- ja targa kodu lahendusi kasutades 
-            <a class="underline" href="https://ajax.systems/" target="_blank" title="https://ajax.systems/">AJAXi tooteid.</a>
-        </p>
-    </section>
-    <section id="offers" class="flex flex-col space-y-4 mt-16">
-        <div class="flex flex-col-reverse md:flex-row items-center">
-            <div class="w-full md:w-1/2 p-4">
-                <img src="/assets/img/Ajax-4080.jpg" alt="" class="w-full h-72 object-cover">
-            </div>
-            <div class="w-full md:w-1/2 p-4 text-center">
-                <p class="montserrat text-md mb-2">TEENUS</p>
-                <h2 class="libre-baskerville text-4xl">Nutimoodulite paigaldus</h2>
-                <p class="montserrat text-base mt-4">Paigaldame nutimooduleid 12 tunni jooksul</p>
-            </div>
-        </div>
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="w-full md:w-1/2 p-4 text-center">
-                <p class="montserrat text-md mb-2">TEENUS</p>
-                <h2 class="libre-baskerville text-4xl">Nutimaja lahendused</h2>
-                <p class="montserrat text-base mt-4">Teostame töid alati lähtudes kliendi soovidest ja tagasisidest</p>
-            </div>
-            <div class="w-full md:w-1/2 p-4">
-                <img src="/assets/img/KeyPad_Plus_Phone.png" alt="" class="w-full h-72 object-cover">
-            </div>
-        </div>
-        <div class="flex flex-col-reverse md:flex-row items-center">
-            <div class="w-full md:w-1/2 p-4">
-                <img src="/assets/img/10.jpg" alt="" class="w-full h-72 object-cover">
-            </div>        
-            <div class="w-full md:w-1/2 p-4 text-center">
-                <p class="montserrat text-md mb-2">TEENUS</p>
-                <h2 class="libre-baskerville text-4xl">Seadmete müük</h2>
-                <p class="montserrat text-base mt-4">Pakume tipptasemel juhtmevabu tooteid, mille on innovaatiline disain</p>
-            </div>
-        </div>
-    </section>
-    <section id="contact_navbar"></section>
-    <section id="contact" class="flex flex-col items-center mt-20 px-4 md:px-0 mb-16">
-        <p class="what-we-offer-text text-center mb-8 underline">
-            Kontakt
-        </p>
-        <div class="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div class="p-4 text-center flex flex-col items-center justify-center">
-                <div>
-                    <p class="montserrat text-base mb-4">Marina 6, Paldiski, 76801, Estonia</p>
-                    <p class="montserrat text-base mt-4">IBAN: EE282200221083236023</p>
-                    <p class="montserrat text-base mt-4">Registrikood: 16795378</p>
-                    <p class="montserrat text-base mt-4">KMKR: EE102644940</p>
-                    <button id="schedule-button" class="px-4 py-2 bg-black text-white rounded mt-4">Broneeri aeg</button>
+        </section>
+        <section id="offers" class="flex flex-col space-y-4 mt-16">
+            <div class="flex flex-col-reverse md:flex-row items-center">
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="/assets/img/Ajax-4080.jpg" alt="" class="w-full h-72 object-cover">
+                </div>
+                <div class="w-full md:w-1/2 p-4 text-center">
+                    <p class="montserrat text-md mb-2">TEENUS</p>
+                    <h2 class="libre-baskerville text-4xl">Nutimoodulite paigaldus</h2>
+                    <p class="montserrat text-base mt-4">Paigaldame nutimooduleid 12 tunni jooksul</p>
                 </div>
             </div>
-            <div class="p-4 flex flex-col items-center md:items-end justify-center">
-                <div class="w-full h-full">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.123456789!2d24.123456789!3d59.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x123456789abcdef!2sMarina%206%2C%20Paldiski%2C%2076801%2C%20Estonia!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="w-full md:w-1/2 p-4 text-center">
+                    <p class="montserrat text-md mb-2">TEENUS</p>
+                    <h2 class="libre-baskerville text-4xl">Nutimaja lahendused</h2>
+                    <p class="montserrat text-base mt-4">Teostame töid alati lähtudes kliendi soovidest ja tagasisidest</p>
+                </div>
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="/assets/img/KeyPad_Plus_Phone.png" alt="" class="w-full h-72 object-cover">
                 </div>
             </div>
-        </div>
-    </section>
-    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-    <script src="/assets/js/main.js" defer></script>
-    <footer class="bg-gray-100">
-        &copy; U SWITCH OÜ 2024
-    </footer>
+            <div class="flex flex-col-reverse md:flex-row items-center">
+                <div class="w-full md:w-1/2 p-4">
+                    <img src="/assets/img/10.jpg" alt="" class="w-full h-72 object-cover">
+                </div>        
+                <div class="w-full md:w-1/2 p-4 text-center">
+                    <p class="montserrat text-md mb-2">TEENUS</p>
+                    <h2 class="libre-baskerville text-4xl">Seadmete müük</h2>
+                    <p class="montserrat text-base mt-4">Pakume tipptasemel juhtmevabu tooteid, mille on innovaatiline disain</p>
+                </div>
+            </div>
+        </section>
+        <section id="contact_navbar"></section>
+        <section id="contact" class="flex flex-col items-center mt-20 px-4 md:px-0 mb-16">
+            <p class="what-we-offer-text text-center mb-8 underline">
+                Kontakt
+            </p>
+            <div class="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="p-4 text-center flex flex-col items-center justify-center">
+                    <div>
+                        <p class="montserrat text-base mb-4">Marina 6, Paldiski, 76801, Estonia</p>
+                        <p class="montserrat text-base mt-4">IBAN: EE282200221083236023</p>
+                        <p class="montserrat text-base mt-4">Registrikood: 16795378</p>
+                        <p class="montserrat text-base mt-4">KMKR: EE102644940</p>
+                        <button id="schedule-button" class="px-4 py-2 bg-black text-white rounded mt-4">Broneeri aeg</button>
+                    </div>
+                </div>
+                <div class="p-4 flex flex-col items-center md:items-end justify-center">
+                    <div class="w-full h-full">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2645.123456789!2d24.123456789!3d59.123456789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x123456789abcdef!2sMarina%206%2C%20Paldiski%2C%2076801%2C%20Estonia!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+        <script src="/assets/js/main.js" defer></script>
+        <footer class="bg-gray-100">
+            &copy; U SWITCH OÜ 2024
+        </footer>
+    </main>
 </body>
 </html>
