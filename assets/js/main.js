@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Background animation for the CCTV section
+    // Background animation for the CCTV section
     const cctvSection = document.querySelector('.cctv-section-background');
     let positions = [
         { position: 'center', size: '150%' },
@@ -43,14 +44,27 @@ document.addEventListener('DOMContentLoaded', function() {
     let index = 0;
 
     function animateBackground() {
-        cctvSection.style.backgroundPosition = positions[index].position;
-        cctvSection.style.backgroundSize = positions[index].size;
-        index = (index + 1) % positions.length;
-        setTimeout(animateBackground, 10000); // Increase the interval to 10 seconds
+        if (window.innerWidth > 768) { // Disable animation for screens smaller than 768px
+            cctvSection.style.backgroundPosition = positions[index].position;
+            cctvSection.style.backgroundSize = positions[index].size;
+            index = (index + 1) % positions.length;
+            setTimeout(animateBackground, 10000); // Increase the interval to 10 seconds
+        }
     }
 
     // Start the animation immediately
     animateBackground();
+
+    // Re-check on window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            animateBackground();
+        } else {
+            // Reset to default for smaller screens
+            cctvSection.style.backgroundPosition = 'center';
+            cctvSection.style.backgroundSize = 'cover';
+        }
+    });
 
   // Translations JSON
   const languageButton = document.getElementById("language-button");

@@ -51,6 +51,14 @@ footer {
     position: relative;
     height: 800px;
     background-position: center;
+    background-size: cover; /* Ensure the background image covers the entire section */
+}
+
+@media (min-width: 1024px) {
+    .cctv-section-background {
+        height: 600px; /* Adjust the height for mobile devices */
+        background-size: contain; /* Ensure the background image covers the entire section */
+    }
 }
 
 .cctv-section-heading {
