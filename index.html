@@ -21,41 +21,43 @@
                      class="navbar-logo motion-reduce h-10" 
                      sizes="(max-width: 160px) 50vw, 80px">
             </a>
-            <a href="https://www.facebook.com/share/iFuP6sHBjFwZr4Xt/?mibextid=LQQJ4d"><i class="fab fa-facebook h-6 w-6 text-gray-800"></i></a>
-            <a href="https://www.instagram.com/uswitch_estonia/profilecard/?igsh=eXpsaTdsdDE2aDc1"><i class="fab fa-instagram h-6 w-6 text-gray-800"></i></a>
+            <a href="https://www.facebook.com/share/iFuP6sHBjFwZr4Xt/?mibextid=LQQJ4d"><i class="fab fa-facebook h-6 w-6 text-gray-800 mt-2"></i></a>
+            <a href="https://www.instagram.com/uswitch_estonia/profilecard/?igsh=eXpsaTdsdDE2aDc1"><i class="fab fa-instagram h-6 w-6 text-gray-800 mt-2"></i></a>
         </div>
-        <button id="menu-button" class="md:hidden text-gray-800 focus:outline-none">
-            <i class="fas fa-bars w-6 h-6"></i>
-        </button>
-        <div class="hidden md:flex space-x-4">
+        <div class="hidden md:flex md:flex-1 md:justify-center space-x-4">
             <a href="#cctv" class="text-gray-800 p-2 rounded" data-translation-key="navbar_home">Avaleht</a>
             <a href="#services_navbar" class="text-gray-800 p-2 rounded" data-translation-key="navbar_services">Teenused</a>
             <a href="#about_navbar" class="text-gray-800 p-2 rounded" data-translation-key="navbar_about">Meist</a>
             <a href="#contact_navbar" class="text-gray-800 p-2 rounded" data-translation-key="navbar_contact">Kontakt</a>
+        </div>
+        <div class="flex items-center space-x-2 md:space-x-4">
+            <button id="menu-button" class="md:hidden text-gray-800 focus:outline-none flex items-center mt-2">
+                <i class="fas fa-bars w-6 h-6"></i>
+            </button>
+            <div id="language-changer" class="p-2 md:p-5 text-gray-800 flex items-center">
+                <div class="relative inline-flex items-center">
+                    <button id="language-button" class="flex items-center">
+                        <i class="fas fa-globe mr-2"></i>
+                        <span id="selected-language" class="text-sm">
+                            EE <span class="flag-icon flag-icon-ee mr-2"></span>
+                        </span>
+                        <i class="fas fa-caret-down ml-2"></i>
+                    </button>
+                    <div id="language-options"
+                        class="hidden absolute bg-gray-900 rounded mt-2 w-32 right-0 top-full">
+                        <button class="p-2 flex items-center w-full text-left bg-white hover:bg-gray-200"
+                            data-value="ee"><span class="flag-icon flag-icon-ee mr-2 text-white"></span>EE</button>
+                        <button class="p-2 flex items-center w-full text-left bg-white hover:bg-gray-200"
+                            data-value="ru"><span class="flag-icon flag-icon-ru mr-2 text-white"></span>RU</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-gray-200 p-4">
             <a href="#cctv" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-50 mobile-menu-item" data-translation-key="navbar_home">Avaleht</a>
             <a href="#services_navbar" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100 mobile-menu-item" data-translation-key="navbar_services">Teenused</a>
             <a href="#about_navbar" class="block text-gray-800 mb-2 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-100 mobile-menu-item" data-translation-key="navbar_about">Meist</a>
             <a href="#contact_navbar" class="block text-gray-800 bg-gray-200 bg-opacity-25 p-2 rounded transition-opacity duration-150 ease-in-out delay-150 mobile-menu-item" data-translation-key="navbar_contact">Kontakt</a>
-        </div>
-        <div id="language-changer" class="p-5 text-gray-800">
-            <div class="relative inline-flex items-center">
-              <button id="language-button" class="flex items-center">
-                <i class="fas fa-globe mr-2"></i>
-                <span id="selected-language" class="text-sm">
-                  EE <span class="flag-icon flag-icon-ee mr-2"></span>
-                </span>
-                <i class="fas fa-caret-down ml-2"></i>
-              </button>
-              <div id="language-options"
-                class="hidden absolute bg-gray-900 rounded mt-2 w-32 right-0 top-full">
-                <button class="p-2 flex items-center w-full text-left bg-white hover:bg-gray-200"
-                  data-value="ee"><span class="flag-icon flag-icon-ee mr-2 text-white"></span>EE</button>
-                <button class="p-2 flex items-center w-full text-left bg-white hover:bg-gray-200"
-                  data-value="ru"><span class="flag-icon flag-icon-ru mr-2 text-white"></span>RU</button>
-              </div>
-            </div>
         </div>
     </nav>
     <section id="cctv" class="cctv-section-background scroll-animate">
