@@ -1,8 +1,36 @@
 body {
+    margin-top: 80px; /* Adjust this value based on the height of your navbar */
     font-family: 'Montserrat', sans-serif;
+}
+
+footer {
+    padding: 24px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
+
+.montserrat {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.6px;
+    line-height: 27px;
+    color:  rgba(18, 18, 18, 0.75);
 }
 .libre-baskerville {
     font-family: 'Libre Baskerville', serif;
+}
+
+.text-base {
+    font-size: 16px;
+}
+.text-4xl {
+    font-size: 40px;
+}
+@media (min-width: 768px) {
+    #book {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 }
 
 .navbar-logo {
@@ -109,6 +137,11 @@ body {
 
 
 #mobile-menu.show a:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+
+#mobile-menu.show a:nth-child(4) {
     transition-delay: 0.2s;
 }
 /* Add more nth-child rules if you have more menu items */
