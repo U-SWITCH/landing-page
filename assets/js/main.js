@@ -31,4 +31,24 @@ document.addEventListener('DOMContentLoaded', function() {
         Calendly.initPopupWidget({ url: 'https://calendly.com/apilookinlabs/30min' });
         return false;
     });
+
+    // Background animation for the CCTV section
+    const cctvSection = document.querySelector('.cctv-section-background');
+    let positions = [
+        { position: 'center', size: '150%' },
+        { position: 'top left', size: '151%' },
+        { position: 'top right', size: '152%' },
+        { position: 'center', size: '150%' }
+    ];
+    let index = 0;
+
+    function animateBackground() {
+        cctvSection.style.backgroundPosition = positions[index].position;
+        cctvSection.style.backgroundSize = positions[index].size;
+        index = (index + 1) % positions.length;
+        setTimeout(animateBackground, 10000); // Increase the interval to 10 seconds
+    }
+
+    // Start the animation immediately
+    animateBackground();
 });
