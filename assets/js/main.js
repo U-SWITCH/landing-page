@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("schedule-button")
     .addEventListener("click", function () {
-      Calendly.initPopupWidget({ url: "https://calendly.com/pavel-uswitch" });
+      Calendly.initPopupWidget({ url: "https://calendly.com/uswitch-info" });
       return false;
     });
 
