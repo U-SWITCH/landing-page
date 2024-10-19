@@ -45,6 +45,11 @@ footer {
   object-fit: contain;
 }
 
+.nav-link.active {
+    background-color: rgb(107 114 128); /* Change this to your desired active color */
+    color: #ffffff; /* Change this to your desired text color */
+}
+
 .cctv-section-background {
   background-image: url("../img/cctv.jpg");
   transition: background-position 10s ease-in-out,
