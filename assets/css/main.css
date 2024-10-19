@@ -58,7 +58,7 @@ footer {
 }
 
 .cctv-section-background {
-  background-image: url("../img/cctv.jpg");
+  background-image: url("../img/cctv.webp");
   transition: background-position 10s ease-in-out,
     background-size 10s ease-in-out;
   position: relative;
