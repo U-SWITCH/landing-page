@@ -50,6 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Set active link on hash change
   window.addEventListener("hashchange", setActiveLink);
 
+  // Calendly popup widget
+  document
+    .getElementById("schedule-button")
+    .addEventListener("click", function () {
+      Calendly.initPopupWidget({ url: "https://calendly.com/pavel-uswitch" });
+      return false;
+    });
+
   // Background animation for the CCTV section
   const cctvSection = document.querySelector(".cctv-section-background");
   let positions = [
