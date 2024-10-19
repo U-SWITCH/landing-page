@@ -61,10 +61,10 @@ document.addEventListener("DOMContentLoaded", function () {
   // Background animation for the CCTV section
   const cctvSection = document.querySelector(".cctv-section-background");
   let positions = [
-    { position: "center", size: "150%" },
-    { position: "top left", size: "151%" },
-    { position: "top right", size: "152%" },
-    { position: "center", size: "150%" },
+    { position: "center", size: "cover" },
+    { position: "top left", size: "cover" },
+    { position: "top right", size: "cover" },
+    { position: "center", size: "cover" },
   ];
   let index = 0;
 
