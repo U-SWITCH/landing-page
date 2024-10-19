@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // Auto update copyright year
+    document.querySelector("#copyright-year").innerText = new Date().getFullYear();
+
     // Mobile menu toggle
     document.getElementById("menu-button").addEventListener("click", function () {
         let menu = document.getElementById("mobile-menu");
