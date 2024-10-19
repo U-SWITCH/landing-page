@@ -46,8 +46,10 @@ footer {
 }
 
 .nav-link.active {
-    background-color: rgb(107 114 128); /* Change this to your desired active color */
-    color: #ffffff; /* Change this to your desired text color */
+  background-color: rgb(
+    107 114 128
+  ); /* Change this to your desired active color */
+  color: #ffffff; /* Change this to your desired text color */
 }
 
 .cctv-section-background {

@@ -1,53 +1,54 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Auto update copyright year
-    document.querySelector("#copyright-year").innerText = new Date().getFullYear();
+  // Auto update copyright year
+  document.querySelector("#copyright-year").innerText =
+    new Date().getFullYear();
 
-    // Mobile menu toggle
-    document.getElementById("menu-button").addEventListener("click", function () {
-        let menu = document.getElementById("mobile-menu");
-        if (menu.classList.contains("hidden")) {
-            menu.classList.remove("hidden");
-            setTimeout(function () {
-                menu.classList.add("show");
-            }, 10); // Small delay to ensure the transition works
-        } else {
-            menu.classList.remove("show");
-            setTimeout(function () {
-                menu.classList.add("hidden");
-            }, 300); // Delay to match the transition duration
-        }
-    });
-
-    // Close mobile menu when a menu item is clicked
-    document.querySelectorAll(".mobile-menu-item").forEach(function (item) {
-        item.addEventListener("click", function () {
-            let menu = document.getElementById("mobile-menu");
-            menu.classList.remove("show");
-            setTimeout(function () {
-                menu.classList.add("hidden");
-            }, 300); // Delay to match the transition duration
-        });
-    });
-
-    // Handle active link coloring based on URL hash
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    function setActiveLink() {
-        const hash = window.location.hash;
-        navLinks.forEach(link => {
-            if (link.getAttribute("href") === hash) {
-                link.classList.add("active");
-            } else {
-                link.classList.remove("active");
-            }
-        });
+  // Mobile menu toggle
+  document.getElementById("menu-button").addEventListener("click", function () {
+    let menu = document.getElementById("mobile-menu");
+    if (menu.classList.contains("hidden")) {
+      menu.classList.remove("hidden");
+      setTimeout(function () {
+        menu.classList.add("show");
+      }, 10); // Small delay to ensure the transition works
+    } else {
+      menu.classList.remove("show");
+      setTimeout(function () {
+        menu.classList.add("hidden");
+      }, 300); // Delay to match the transition duration
     }
+  });
 
-    // Set active link on page load
-    setActiveLink();
+  // Close mobile menu when a menu item is clicked
+  document.querySelectorAll(".mobile-menu-item").forEach(function (item) {
+    item.addEventListener("click", function () {
+      let menu = document.getElementById("mobile-menu");
+      menu.classList.remove("show");
+      setTimeout(function () {
+        menu.classList.add("hidden");
+      }, 300); // Delay to match the transition duration
+    });
+  });
 
-    // Set active link on hash change
-    window.addEventListener("hashchange", setActiveLink);
+  // Handle active link coloring based on URL hash
+  const navLinks = document.querySelectorAll(".nav-link");
+
+  function setActiveLink() {
+    const hash = window.location.hash;
+    navLinks.forEach((link) => {
+      if (link.getAttribute("href") === hash) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
+
+  // Set active link on page load
+  setActiveLink();
+
+  // Set active link on hash change
+  window.addEventListener("hashchange", setActiveLink);
 
   // Calendly popup widget
   document
