@@ -52,6 +52,11 @@ footer {
   color: #ffffff; /* Change this to your desired text color */
 }
 
+.nav-link:not(.active):hover {
+  background-color: rgb(229, 231, 235); /* Adjust this to your desired hover color */
+  color: rgb(31, 41, 55); /* Adjust this to your desired text color on hover */
+}
+
 .cctv-section-background {
   background-image: url("../img/cctv.jpg");
   transition: background-position 10s ease-in-out,
